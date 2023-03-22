@@ -2,7 +2,7 @@
     scroll-behavior: smooth;
 }
 .search {
-    width: 71%;
+    width: 100%;
     /* margin: 4rem 0 2rem; */
   
     align-items: center;
@@ -16,6 +16,8 @@
   }
 
   .search input {
+    width: 100%;
+
     border: none;
     font-size: 1.5rem;
     font-family: var(--font-raleway);

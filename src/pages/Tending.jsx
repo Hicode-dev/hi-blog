@@ -21,7 +21,7 @@ useEffect(()  =>{
     if (query == "") {
       return true
     }else if ((c.title && c.title.toLowerCase().includes(query.toLowerCase()))) {
-      return true
+      return c
     }else if(c.name && c.name.toLowerCase().includes(query.toLowerCase())){
       return true
     } else{
@@ -45,7 +45,8 @@ useEffect(()  =>{
   }, [])
   return (
     <Layout>
-      <div className='flex flex-wrap w-full p-4 sm:ml-64  gap-3  justify-center items-center h-screen  mx-auto bg-[#212426] text-white'>
+      <div className='flex flex-wrap w-full p-4 sm:ml-64  gap-3  justify-center items-center
+       h- mx-auto bg-[#212426] text-white'>
         <ModalContent />
 
         { 
