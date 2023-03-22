@@ -16,18 +16,19 @@ const Tending = () => {
   //     window.scroll(0,0)
   // }
   const { mode,query, setQuery} = useContext(ThemeProvider)
-useEffect(()  =>{
   const filterd = content.filter((c) =>{
     if (query == "") {
       return true
     }else if ((c.title && c.title.toLowerCase().includes(query.toLowerCase()))) {
-      return c
+      return true
     }else if(c.name && c.name.toLowerCase().includes(query.toLowerCase())){
       return true
     } else{
       return false
     }
   })
+useEffect(()  =>{
+  filterd
   setFilter(filterd )
 },[query,content])
 
